@@ -67,9 +67,31 @@ client.on("message", (message) => {
 })
 ```
 
+### Pay
+
+```js
+
+client.on("message", (message) => {
+
+    const args = message.content.slice(settings.prefix.length).trim().split(/ +/g);
+    const command = args.shift().toLowerCase();
+
+    if(command === "pay"){
+      const money = args[0]
+      const user = message.mentions.users.first();
+      if(client.coinManager.getUser(message.author.id, { guildID: message.guild.id }).money > money){
+      client.coinManager.addMoney(user.id, { guildID: message.guild.id, money: money })
+      client.coinManager.removeMoney(message.author.id, { guildID: message.guild.id, money: money })
+      }
+    }
+})
+
+```
+
 ### getUser
 
 ```js
+
 client.on("message", (message) => {
 
     const args = message.content.slice(settings.prefix.length).trim().split(/ +/g);
@@ -81,6 +103,7 @@ client.on("message", (message) => {
       })
     }
 })
+
 ```
 
 ## Events
