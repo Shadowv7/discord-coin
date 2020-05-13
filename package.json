@@ -1,0 +1,31 @@
+{
+  "name": "discord-coin",
+  "version": "1.0.0",
+  "description": "Framework to facilitate the economy system for bot discord.",
+  "main": "index.js",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "merge-options": "^2.0.0",
+    "util": "^0.12.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ShadowV#9339",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shadowv7/discord-coin.git"
+  },
+  "keywords": [
+    "coins",
+    "money",
+    "discord",
+    "bot"
+  ],
+  "bugs": {
+    "url": "https://github.com/Shadowv7/discord-coin/issues"
+  },
+  "homepage": "https://github.com/Shadowv7/discord-coin#readme"
+}
